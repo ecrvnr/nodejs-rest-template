@@ -11,14 +11,14 @@ const routes = function(handler) {
     ROUTER.use(BODY_PARSER.json());
 
     ROUTER.get('/', (req, res) => {
-        LOGGER.log('debug', 'Calling route /');
+        LOGGER.log('debug', 'Calling route /api');
         res.send({
             message: 'Hello, World!'
         });
     });
 
     ROUTER.get('/template', (req, res) => {
-        LOGGER.log('debug', 'calling route /template');
+        LOGGER.log('debug', 'calling route /api/template');
         handler.saveTemplate(req, (result) => {
             res.send(result);
         });
