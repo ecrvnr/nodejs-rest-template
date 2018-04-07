@@ -3,7 +3,7 @@ const LOGGER = require('../logger')('handler');
 const Template = require('../db/models/template');
 
 // save an instance of ToDo to the database
-const saveTemplate = function(req, callback) {
+function saveTemplate(req, callback) {
 
     // insert into TodoList Collection
     const TEMPLATE_ITEM = new Template({
@@ -21,7 +21,7 @@ const saveTemplate = function(req, callback) {
             callback(result);
         }
     });
-};
+}
 
 // returned when requiring this module
 const HANDLER = {
