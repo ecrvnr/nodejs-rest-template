@@ -6,7 +6,7 @@ const Schema = MONGOOSE.Schema;
 const TEMPLATE_SCHEMA = new Schema({
     itemId: Number,
     item: String,
-}, { collection: 'Templates' });
+}, { collection: 'template' });
 
 // returned when requiring this module
 const Template = MONGOOSE.model('Test', TEMPLATE_SCHEMA);
