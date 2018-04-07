@@ -2,14 +2,6 @@
 const LOGGER = require('../logger')('handler');
 const Template = require('../db/models/template');
 
-const findAll = function() {
-    Template.find((err, result) => {
-        if (!err) {
-            LOGGER.log('info', result.toString());
-        }
-    });
-};
-
 // save an instance of ToDo to the database
 const saveTemplate = function(req, callback) {
 
@@ -33,8 +25,7 @@ const saveTemplate = function(req, callback) {
 
 // returned when requiring this module
 const HANDLER = {
-    saveTemplate,
-    findAll
+    saveTemplate
 };
 
 module.exports = HANDLER;
