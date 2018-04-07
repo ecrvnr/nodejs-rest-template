@@ -1,11 +1,8 @@
 // test/db/index.js
 /* eslint-env node, mocha */
-const assert = require('chai').assert;
-const APP_CONFIG = require('../../config');
 
-// Set up configuration variables according to the current execution environment
-const ENVIRONMENT = APP_CONFIG.environment;
-const CONFIG = APP_CONFIG[ENVIRONMENT];
+const assert = require('chai').assert;
+const CONFIG = require('../../config');
 
 describe('Database', () => {
     it('Shouldn\'t connect without config', (done) => {

@@ -1,26 +1,15 @@
 // config/index.js
+
+const APP = require('./app');
+const DB = require('./db');
+
+// Use this constant to set the current environment
+const environment = 'development'; // 'development', 'production'
+
 const CONFIG = {
-    environment: 'development', // development, production
-    development: {
-        app: {
-            port: 8081, // Default port number
-            logLevel: 'debug', // error, warn, info, verbose, debug, silly
-        },
-        db: {
-            uri: process.env.MONGODB_DEV_URI, // Name of the database
-            name: process.env.MONGODB_NAME, // Host address
-        },
-    },
-    production: {
-        app: {
-            port: 8081, // Default port number
-            logLevel: 'info', // error, warn, info, verbose, debug, silly
-        },
-        db: {
-            uri: process.env.MONGODB_PROD_URI, // Name of the database
-            name: process.env.MONGODB_NAME, // Host address
-        },
-    },
+    environment: environment, 
+    app: APP(environment),
+    db: DB(environment)
 };
 
 module.exports = CONFIG;

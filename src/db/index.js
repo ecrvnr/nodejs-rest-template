@@ -1,4 +1,5 @@
 // src/db/index.js
+
 const MONGOOSE = require('mongoose');
 const LOGGER = require('../logger')('db');
 const assert = require('assert');
@@ -9,7 +10,7 @@ const db = function(CONFIG) {
     LOGGER.log('info', 'Setting up database connection');
 
     // construct the database URI
-    const DB_URI = `${CONFIG.db.uri}/${CONFIG.db.name}`;
+    const DB_URI = `mongodb://${CONFIG.db.user}:${CONFIG.user.password}@${CONFIG.db.uri}/${CONFIG.db.name}`;
 
     // connect to the database
     LOGGER.log('debug', `Connecting to ${DB_URI}`);

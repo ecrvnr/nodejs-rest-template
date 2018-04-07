@@ -1,5 +1,6 @@
 // test/db/models/todo.js
 /* eslint-env node, mocha */
+
 const Template = require('../../../src/db/models/template');
 const assert = require('chai').assert;
 

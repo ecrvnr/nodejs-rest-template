@@ -1,4 +1,5 @@
 // src/db/schema.js
+
 const MONGOOSE = require('mongoose');
 const Schema = MONGOOSE.Schema;
 
