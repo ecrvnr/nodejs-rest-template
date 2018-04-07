@@ -1,9 +1,8 @@
 // index.js
 
 // set up configuration variables according to the current execution environment
-const APP_CONFIG = require('./config');
-const ENVIRONMENT = APP_CONFIG.environment;
-const CONFIG = APP_CONFIG[ENVIRONMENT];
+const CONFIG = require('./config');
+const ENVIRONMENT = CONFIG.environment;
 const DEFAULT_PORT = CONFIG.app.port;
 const LOG_LEVEL = CONFIG.app.logLevel;
 
