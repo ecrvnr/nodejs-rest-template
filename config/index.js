@@ -4,7 +4,7 @@ const APP = require('./app');
 const DB = require('./db');
 
 // Use this constant to set the current environment
-const environment = 'development'; // 'development', 'production'
+const environment = 'development'; // 'development', 'production', 'other'
 
 const CONFIG = {
     environment: environment, 

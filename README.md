@@ -97,7 +97,7 @@ Those two files should not be checked into version control as they are likely to
 To run unit tests, use `npm test ./test/path/to/module`.
 
 ## Switch between development and production environments:
-Simply edit the `environment` field in `config/index.js`.
+Simply edit the `environment` constant in `config/index.js`.
 
 # Modules used in this project:
 ## Dependencies:
