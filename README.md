@@ -4,7 +4,7 @@ A template project for a REST API built with node.js, relying on a MongoDB datab
 # Prerequisites:  
 
 ## Environment variables:
-* MONGODB_DEV_URI: URI pointed to a running MongoDB service, for example `mongodb://localhost:27017`;
+* MONGODB_DEV_URI: URI pointing to a running MongoDB service, for example `mongodb://localhost:27017`;
 * MONGODB_NAME: The name of the database, for example `example-db`.
 
 # How-To:
