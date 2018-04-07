@@ -21,17 +21,20 @@ A template project for a REST API built with node.js, relying on a MongoDB datab
 function config(environment) {
 
     switch (environment) {
+        
     case 'development':
         return {
             port: 8081, // Default port number
             logLevel: 'debug', // error, warn, info, verbose, debug, silly
         };
+
     case 'production':
         return {
             port: 8081, // Default port number
             logLevel: 'info', // error, warn, info, verbose, debug, silly
         };
     },
+    
     case 'other':
         return {
             port: xxxxx, // Default port number
@@ -67,6 +70,7 @@ function config(environment) {
             user: process.env.MONGODB_PROD_USER // database user associated with the app
         };
     },
+
     case 'other':
         return {
             uri: 'whateveryouwant:9999', // host address
