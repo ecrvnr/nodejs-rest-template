@@ -58,7 +58,7 @@ function config(environment) {
         return {
             uri: process.env.MONGODB_DEV_URI, // host address
             name: process.env.MONGODB_DEV_NAME, // name of the database
-            password: process.env.MONGODB_DEV_PASSWD, // database password
+            password: process.env.MONGODB_DEV_PASSWORD, // database password
             user: process.env.MONGODB_DEV_USER // database user associated with the app
         };
 
@@ -66,7 +66,7 @@ function config(environment) {
         return {
             uri: process.env.MONGODB_PROD_URI, // host address
             name: process.env.MONGODB_PROD_NAME, // name of the database
-            password: process.env.MONGODB_PROD_PASSWD, // database password
+            password: process.env.MONGODB_PROD_PASSWORD, // database password
             user: process.env.MONGODB_PROD_USER // database user associated with the app
         };
     },
