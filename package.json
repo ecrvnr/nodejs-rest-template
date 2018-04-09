@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/ecrvnr/nodejs-rest-template/issues"
   },
-  "homepage": "https://github.com/ecrvnr/nodejs-rest-template#readme",
+  "homepage": "https://ecrvnr.github.io/nodejs-rest-template/",
   "dependencies": {
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
