@@ -4,10 +4,10 @@ A template project for a REST API built with node.js, relying on a MongoDB datab
 # Prerequisites:  
 
 ## Environment variables:
-* `MONGODB_DEV_URI`, `MONGODB_PROD_URI` : URI pointing to a running MongoDB service, for example `localhost:27017`. For production this is more likely to point to a remote server;
-* `MONGODB_DEV_NAME`, `MONGODB_PROD_NAME`: The name of the database, for example `example-db`;
-* `MONGODB_DEV_USER`, `MONGODB_DEV_USER`: The database username associated with the app;
-* `MONGODB_DEV_PASSWD`, `MONGODB_DEV_PASSWD`: The database password associated with the user.
+* `MONGODB_TEMPLATE_DEV_URI`, `MONGODB_TEMPLATE_PROD_URI` : URI pointing to a running MongoDB service, for example `localhost:27017`. For production this is more likely to point to a remote server;
+* `MONGODB_TEMPLATE_DEV_NAME`, `MONGODB_TEMPLATE_PROD_NAME`: The name of the database, for example `example-db`;
+* `MONGODB_TEMPLATE_DEV_USER`, `MONGODB_TEMPLATE_DEV_USER`: The database username associated with the app;
+* `MONGODB_TEMPLATE_DEV_PASSWORD`, `MONGODB_TEMPLATE_DEV_PASSWORD`: The database password associated with the user.
 
 # How-To:
 
