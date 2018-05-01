@@ -10,9 +10,10 @@ const db = function(CONFIG) {
     LOGGER.log('info', 'Setting up database connection');
 
     // construct the database URI
-    const DB_URI = `mongodb://${CONFIG.db.user}:${CONFIG.db.password}@${CONFIG.db.uri}/${CONFIG.db.name}`;
+    const DB_URI = `${CONFIG.db.uri}`;
 
     // connect to the database
+    LOGGER.log('debug', `Connecting to database at ${CONFIG.db.uri}`);
     MONGOOSE.connect(DB_URI);
     const DB = MONGOOSE.connection;
 

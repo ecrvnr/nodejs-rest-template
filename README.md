@@ -4,10 +4,7 @@ A template project for a REST API built with node.js, relying on a MongoDB datab
 # Prerequisites:  
 
 ## Environment variables:
-* `MONGODB_TEMPLATE_DEV_URI`, `MONGODB_TEMPLATE_PROD_URI` : URI pointing to a running MongoDB service, for example `localhost:27017`. For production this is more likely to point to a remote server;
-* `MONGODB_TEMPLATE_DEV_NAME`, `MONGODB_TEMPLATE_PROD_NAME`: The name of the database, for example `example-db`;
-* `MONGODB_TEMPLATE_DEV_USER`, `MONGODB_TEMPLATE_DEV_USER`: The database username associated with the app;
-* `MONGODB_TEMPLATE_DEV_PASSWORD`, `MONGODB_TEMPLATE_DEV_PASSWORD`: The database password associated with the user.
+* `MONGODB_TEMPLATE_DEV_URI`, `MONGODB_TEMPLATE_PROD_URI` : URI pointing to a running MongoDB service, for example `mongodb://user:pasword@localhost:27017/template-db`. For production this is more likely to point to a remote server;
 
 # How-To:
 
@@ -56,27 +53,18 @@ function config(environment) {
         
     case 'development':
         return {
-            uri: process.env.MONGODB_DEV_HOST, // host address
-            name: process.env.MONGODB_TEMPLATE_DEV_NAME, // name of the database
-            password: process.env.MONGODB_TEMPLATE_DEV_PASSWORD, // database password
-            user: process.env.MONGODB_TEMPLATE_DEV_USER // database user associated with the app
+            uri: process.env.MONGODB_TEMPLATE_DEV_URI, // database uri
         };
 
     case 'production':
         return {
-            uri: process.env.MONGODB_PROD_HOST, // host address
-            name: process.env.MONGODB_TEMPLATE_PROD_NAME, // name of the database
-            password: process.env.MONGODB_TEMPLATE_PROD_PASSWORD, // database password
-            user: process.env.MONGODB_TEMPLATE_PROD_USER // database user associated with the app
+            uri: process.env.MONGODB_TEMPLATE_PROD_URI, // database uri
         };
     },
 
     case 'other':
         return {
-            uri: 'whateveryouwant:9999', // host address
-            name: 'database', // name of the database
-            password: '123', // database password
-            user: 'foo' // database user associated with the app
+            uri: 'mongodb://user:password@host:port/db', // database uri
         };
     }
 }
